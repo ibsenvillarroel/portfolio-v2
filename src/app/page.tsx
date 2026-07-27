@@ -106,7 +106,7 @@ export default function Home() {
 
       <section
         id="top"
-        className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-center px-6 py-24 lg:px-8"
+        className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl items-center px-6 py-16 sm:py-20 lg:px-8 lg:py-24"
       >
         <div className="grid w-full gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
@@ -115,7 +115,7 @@ export default function Home() {
               Senior Insurance Technology Consultant
             </div>
 
-            <h1 className="max-w-5xl text-5xl font-semibold leading-[1.03] tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-5xl text-[2.75rem] font-semibold leading-[1.03] tracking-[-0.045em] text-white sm:text-6xl lg:text-6xl xl:text-7xl">
               I turn complex insurance requirements into{" "}
               <span className="text-cyan-300">reliable systems</span> and
               data-driven products.
@@ -200,7 +200,7 @@ export default function Home() {
 
       <section
         id="work"
-        className="relative z-10 mx-auto max-w-7xl px-6 py-28 lg:px-8"
+        className="relative z-10 mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28"
       >
         <div className="max-w-3xl">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-300">
@@ -221,18 +221,17 @@ export default function Home() {
           {selectedWork.map((project) => (
             <article
               key={project.title}
-              className={`group flex min-h-[31rem] flex-col rounded-[1.75rem] border p-7 transition duration-300 ${
-                project.featured
-                  ? "border-cyan-300/25 bg-cyan-300/[0.06] hover:border-cyan-300/45"
-                  : "border-white/10 bg-white/[0.03] hover:border-white/20"
-              }`}
+              className={`group flex min-h-0 flex-col rounded-[1.75rem] border p-6 transition duration-300 sm:p-7 lg:min-h-[28rem] ${project.featured
+                ? "border-cyan-300/25 bg-cyan-300/[0.06] hover:border-cyan-300/45"
+                : "border-white/10 bg-white/[0.03] hover:border-white/20"
+                }`}
             >
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-300">
                 {project.category}
               </p>
 
-              <div className="mt-20">
-                <p className="text-sm text-slate-500">{project.subtitle}</p>
+              <div className="mt-14">
+                <p className="text-sm text-slate-400">{project.subtitle}</p>
                 <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white">
                   {project.title}
                 </h3>
@@ -265,7 +264,7 @@ export default function Home() {
                     <span className="ml-2">↗</span>
                   </a>
                 ) : (
-                  <span className="text-sm text-slate-600">
+                  <span className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-slate-400">
                     {project.action}
                   </span>
                 )}
@@ -279,9 +278,9 @@ export default function Home() {
         id="expertise"
         className="relative z-10 border-y border-white/5 bg-white/[0.02]"
       >
-        <div className="mx-auto max-w-7xl px-6 py-28 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <div>
+            <div className="lg:pt-4">
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-300">
                 Expertise
               </p>
@@ -322,7 +321,7 @@ export default function Home() {
 
       <section
         id="about"
-        className="relative z-10 mx-auto max-w-7xl px-6 py-28 lg:px-8"
+        className="relative z-10 mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28"
       >
         <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
@@ -361,7 +360,7 @@ export default function Home() {
       </section>
 
       <section className="relative z-10 px-6 pb-8 lg:px-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-cyan-300/[0.06] px-7 py-14 sm:px-12 lg:flex lg:items-center lg:justify-between">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[1.5rem] border border-cyan-300/20 bg-cyan-300/[0.06] px-6 py-10 sm:rounded-[2rem] sm:px-12 sm:py-14 lg:flex lg:items-center lg:justify-between">
           <div className="max-w-3xl">
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-300">
               Let&apos;s connect
@@ -375,19 +374,19 @@ export default function Home() {
 
           <a
             href="mailto:ibsenvillarroel@gmail.com"
-            className="mt-8 inline-flex shrink-0 items-center justify-center rounded-full bg-cyan-300 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-200 lg:ml-10 lg:mt-0"
+            className="mt-8 inline-flex w-full shrink-0 items-center justify-center rounded-full bg-cyan-300 px-7 py-3.5 font-semibold text-slate-950 transition hover:bg-cyan-200 sm:w-auto lg:ml-10 lg:mt-0"
           >
             Start a conversation
           </a>
         </div>
       </section>
 
-      <footer className="relative z-10 mx-auto flex max-w-7xl flex-col gap-4 px-6 py-10 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <footer className="relative z-10 mx-auto flex max-w-7xl flex-col gap-4 px-6 py-10 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
         <p>© 2026 Ibsen Villarroel.</p>
 
         <div className="flex gap-6">
           <a
-            className="transition hover:text-slate-300"
+            className="transition hover:text-slate-200"
             href="https://www.linkedin.com/in/ibsen-villarroel"
             target="_blank"
             rel="noreferrer"
@@ -396,7 +395,7 @@ export default function Home() {
           </a>
 
           <a
-            className="transition hover:text-slate-300"
+            className="transition hover:text-slate-200"
             href="https://github.com/ibsenvillarroel"
             target="_blank"
             rel="noreferrer"
@@ -405,7 +404,7 @@ export default function Home() {
           </a>
 
           <a
-            className="transition hover:text-slate-300"
+            className="transition hover:text-slate-200"
             href="https://quinielamania.com"
             target="_blank"
             rel="noreferrer"
